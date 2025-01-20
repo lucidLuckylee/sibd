@@ -54,7 +54,7 @@ def felts_to_hash(felts):
     res = 0
     for i in range(8):
         felt = felts[i]
-        # Swap endianess
+        # Swap endianness
         felt = struct.unpack("<I", struct.pack(">I", felt))[0]
         res += pow(2**32, i) * felt
 
