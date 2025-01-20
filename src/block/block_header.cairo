@@ -255,7 +255,7 @@ func validate_prev_block_hash(context: BlockHeaderValidationContext) {
 func validate_proof_of_work{range_check_ptr, bitwise_ptr: BitwiseBuiltin*}(
     context: BlockHeaderValidationContext
 ) {
-    // Swap the endianess in the uint32 chunks of the hash
+    // Swap the endianness in the uint32 chunks of the hash
     let reader = init_reader(context.block_hash);
     let hash = read_bytes{reader=reader}(32);
 

@@ -1,4 +1,4 @@
-// Note that Bitcoin Core and most block explorers swap the endianess when displaying a hash
+// Note that Bitcoin Core and most block explorers swap the endianness when displaying a hash
 // So, we have to reverse the byte order to compute the merkle tree
 
 //

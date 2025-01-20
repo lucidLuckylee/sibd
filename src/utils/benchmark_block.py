@@ -54,7 +54,7 @@ def felts_to_hash(felts):
     res = 0
     for i in range(8):
         felt = felts[i]
-        # Swap endianess
+        # Swap endianness
         felt = struct.unpack("<I", struct.pack(">I", felt))[0]
         res += pow(2**32, i) * felt
 
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     cmd = f'cairo-compile src/chain_proof/main.cairo --cairo_path src --output {output_dir}/program.json'
     print(os.popen(cmd).read())  # In case there are compilation issues
     print('Done.')
-    print('Fetching utxos and setting up brige node and initial state...')
+    print('Fetching utxos and setting up bridge node and initial state...')
     # Copy genesis state.json into the output directory
     # also read the program_length from program.json
     # and add it to the state.json
